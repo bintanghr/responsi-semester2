@@ -34,8 +34,15 @@ namespace ResponsiPemrograman4325
         {
             this.nik = nik;
             this.nama = nama;
-            this.gajibulanan = gajibulanan;
+            this.gajibulanan = (gajibulanan < 0) ? (this.gajibulanan = 0) : (this.gajibulanan = gajibulanan);
         }
 
+        public void NaikGaji(int nik, string nama, float gajibulanan)
+        {
+            this.nik = nik;
+            this.nama = nama;
+            gajibulanan = 110 / 100 * gajibulanan;
+            Console.WriteLine("1. {0}  {1}  {2}",Nik,Nama,GajiBulanan);
+        }
     }
 }
